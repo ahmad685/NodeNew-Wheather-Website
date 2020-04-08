@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <script>
+    function setURL(e){
+       // console.log(e)
+    var dt_value = document.getElementById("dt_id").value;
+    //just test here ..what is coming..
+    //alert(dt_value );
+    var sjdurl =  "?address="+dt_value;
+    //console.log(e.target)
+    e.href=e.href+sjdurl;
+{{!-- popup = window.open(sjdurl,"popup"," menubar =0,toolbar =0,location=0, height=900, width=1000"); 
+popup.window.moveTo(950,150);  --}}
+    }
+    </script>
+    </head>
+    <body>
+        {{>header}}
+        <h1>{{name}}</h1>
+        <p>{{title}}</p>
+        {{!-- {{>footer}} --}}
+                        <div style="text-align:left; margin:8px 5px auto;">
+            <input type="Text" id="dt_id" maxlength="25" size="25"/>
+            {{!-- <input type='button' onclick='setURL()' value='SUBMIT'>  --}}
+                    </div>
+    <form>
+        <input type="text" id="location_id" placeholder="Location">
+        <button>Search</button>
+    </form>
+    <p id="message-1"></p>
+    <p id="message-2"></p>
+    <script src="/js/app.js"></script>
+    </body>
+    <footer>{{>footer}}</footer>
+</html>
