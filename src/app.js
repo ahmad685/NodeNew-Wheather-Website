@@ -52,7 +52,7 @@ app.get('/Weather',(req,res)=>{
         if(error){
             return res.send({error})
         }
-        forecast(latitude,longitude,(error,{summary,temperature,precipProbability}={})=>{
+        forecast(latitude,longitude,(error,{summary,temperature,precipProbability,pressure}={})=>{
             if(error){
                 return res.send({error})
             }
@@ -61,7 +61,9 @@ app.get('/Weather',(req,res)=>{
                 location: location,
                 summary: summary,
                 temperature: temperature,
-                precipProbability: precipProbability
+                precipProbability: precipProbability,
+                pressure:pressure
+
             })
             // res.render('weather',{
             //     location,summary,temperature,precipProbability

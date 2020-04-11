@@ -16,7 +16,9 @@ const forecast=(latitude,longitude,callback)=>{
             const forecastdata={
                 temperature:body.currently.temperature,
                 precipProbability:body.currently.precipProbability,
-                'summary':body.currently.summary
+                'summary':body.currently.summary,
+                pressure:body.currently.pressure
+
                }
                callback(undefined,forecastdata)
 
