@@ -20,7 +20,7 @@ weatherform.addEventListener('submit',(e)=>{
                 //console.log(data.error);
             }else{
                 message_one.textContent=''
-                message_two.textContent='Location is='+data.location+'/b Temperature is='+data.temperature+'/b  Summary is='+data.summary+'/b Pressure is='+data.pressure;
+                message_two.textContent='Location is='+data.location+'. Temperature is='+data.temperature+'.  Summary is='+data.summary+'. Pressure is='+data.pressure;
                 // console.log(data.location);
                 // console.log(data.temperature);
             }
